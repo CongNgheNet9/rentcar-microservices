@@ -1,0 +1,69 @@
+services:
+  gateway:
+    build:
+      context: ./src/backend
+      dockerfile: RentCar.Gateway/Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ReverseProxy__Clusters__user-cluster__Destinations__destination1__Address=http://user-service:5001/
+      - ReverseProxy__Clusters__vehicle-cluster__Destinations__destination1__Address=http://vehicle-service:5002/
+      - ReverseProxy__Clusters__booking-cluster__Destinations__destination1__Address=http://booking-service:5003/
+    depends_on:
+      - user-service
+      - vehicle-service
+      - booking-service
+
+  user-service:
+    build:
+      context: ./src/backend
+      dockerfile: RentCar.UserService/Dockerfile
+    ports:
+      - "5001:5001"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Data Source=/app/data/users.db
+    volumes:
+      - user-data:/app/data
+
+  vehicle-service:
+    build:
+      context: ./src/backend
+      dockerfile: RentCar.VehicleService/Dockerfile
+    ports:
+      - "5002:5002"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Data Source=/app/data/vehicles.db
+    volumes:
+      - vehicle-data:/app/data
+
+  booking-service:
+    build:
+      context: ./src/backend
+      dockerfile: RentCar.BookingService/Dockerfile
+    ports:
+      - "5003:5003"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Data Source=/app/data/bookings.db
+      - Services__VehicleService=http://vehicle-service:5002/
+    volumes:
+      - booking-data:/app/data
+    depends_on:
+      - vehicle-service
+
+  frontend:
+    build:
+      context: ./src/frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5173:80"
+    depends_on:
+      - gateway
+
+volumes:
+  user-data:
+  vehicle-data:
+  booking-data:

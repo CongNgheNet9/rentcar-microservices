@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCar.Shared", "RentCar.Shared\RentCar.Shared.csproj", "{4D69FB74-42CB-401C-87E2-B879FFD0160F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCar.UserService", "RentCar.UserService\RentCar.UserService.csproj", "{CF237F29-0BC7-40CB-897D-9B301E530915}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCar.VehicleService", "RentCar.VehicleService\RentCar.VehicleService.csproj", "{E3074FE8-098B-405E-9F27-1644EC23C59A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCar.BookingService", "RentCar.BookingService\RentCar.BookingService.csproj", "{5203B23B-DA20-4D55-B49B-AB5FA87BEC52}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCar.Gateway", "RentCar.Gateway\RentCar.Gateway.csproj", "{90F23265-0C7C-4C9E-988F-DA6F1409F1A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RentCar.BookingService.Tests", "RentCar.BookingService.Tests\RentCar.BookingService.Tests.csproj", "{60DEF347-F14B-4E42-AB11-7E6584D3DFC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D69FB74-42CB-401C-87E2-B879FFD0160F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D69FB74-42CB-401C-87E2-B879FFD0160F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D69FB74-42CB-401C-87E2-B879FFD0160F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D69FB74-42CB-401C-87E2-B879FFD0160F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF237F29-0BC7-40CB-897D-9B301E530915}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF237F29-0BC7-40CB-897D-9B301E530915}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF237F29-0BC7-40CB-897D-9B301E530915}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF237F29-0BC7-40CB-897D-9B301E530915}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3074FE8-098B-405E-9F27-1644EC23C59A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3074FE8-098B-405E-9F27-1644EC23C59A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3074FE8-098B-405E-9F27-1644EC23C59A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3074FE8-098B-405E-9F27-1644EC23C59A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5203B23B-DA20-4D55-B49B-AB5FA87BEC52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5203B23B-DA20-4D55-B49B-AB5FA87BEC52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5203B23B-DA20-4D55-B49B-AB5FA87BEC52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5203B23B-DA20-4D55-B49B-AB5FA87BEC52}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90F23265-0C7C-4C9E-988F-DA6F1409F1A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90F23265-0C7C-4C9E-988F-DA6F1409F1A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90F23265-0C7C-4C9E-988F-DA6F1409F1A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90F23265-0C7C-4C9E-988F-DA6F1409F1A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60DEF347-F14B-4E42-AB11-7E6584D3DFC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60DEF347-F14B-4E42-AB11-7E6584D3DFC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60DEF347-F14B-4E42-AB11-7E6584D3DFC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60DEF347-F14B-4E42-AB11-7E6584D3DFC5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
